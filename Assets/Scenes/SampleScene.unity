@@ -437,7 +437,7 @@ Transform:
   m_GameObject: {fileID: 528449803}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.472, y: -0.538, z: 0}
+  m_LocalPosition: {x: -0.4, y: -0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 1687036642}
   - component: {fileID: 1687036641}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: "\u7403"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -693,7 +693,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 2100892067}
   - component: {fileID: 2100892066}
   m_Layer: 0
-  m_Name: "\u89F8\u767C\u5668"
+  m_Name: QRCode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -890,8 +890,8 @@ Transform:
   m_GameObject: {fileID: 2100892065}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.25, y: -1.115, z: -0.006754895}
-  m_LocalScale: {x: 0.21204452, y: 0.06578577, z: 1}
+  m_LocalPosition: {x: -3.48, y: -0.34, z: -0.006754895}
+  m_LocalScale: {x: 0.21204452, y: 0.18365413, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

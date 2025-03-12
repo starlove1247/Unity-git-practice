@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    private void Start()
-    {
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
-        // gameObject.SetActive(false);
         Debug.Log("OnTriggerEnter2D");
-        gameObject.SetActive(false);
-        col.gameObject.SetActive(false);
+        // gameObject.SetActive(false);
+        // gameObject.SetActive(false);
+        // 隱藏物件
+        // col.gameObject.SetActive(false);
+
+        GameObject qrCode = GameObject.Find("QRCode");
+        qrCode.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D col)
