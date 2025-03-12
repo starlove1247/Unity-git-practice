@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2433c7bc5f3694428f8466f789c06ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  qrCode: {fileID: 2100892065}
 --- !u!212 &528449806
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -783,7 +784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &2100892066
 BoxCollider2D:
   m_ObjectHideFlags: 0
