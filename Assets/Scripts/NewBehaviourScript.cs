@@ -14,7 +14,7 @@ public class NewBehaviourScript : MonoBehaviour
         // gameObject.SetActive(false);
         // 隱藏物件
         // col.gameObject.SetActive(false);
-        // GameObject qrCode = GameObject.Find("QRCode");
+        GameObject qrCode = GameObject.Find("QRCode");
         // gameObject.SetActive(false);
 
         qrCode.SetActive(true);
