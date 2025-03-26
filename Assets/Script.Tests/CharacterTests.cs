@@ -31,4 +31,26 @@ public class CharacterTests
         var hp = enemy.GetHp();
         Assert.AreEqual(90 , hp);
     }
+
+    [Test(Description = "攻擊已死亡的敵人就不會繼續扣血，血量最低為0")]
+    public void Character_Attack_Dead_Enemy()
+    {
+        // arrange
+        // 建立玩家角色的元件
+        var character = new GameObject().AddComponent<Character>();
+        character.SetAtk(90);
+
+        // 建立敵人的元件
+        var enemy = new GameObject().AddComponent<Enemy>();
+        enemy.SetHp(100);
+
+        // act
+        // 玩家角色攻擊敵人
+        character.Attack(enemy);
+        character.Attack(enemy);
+
+        // assert
+        var hp = enemy.GetHp();
+        Assert.AreEqual(0 , hp);
+    }
 }
