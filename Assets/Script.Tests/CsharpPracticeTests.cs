@@ -8,10 +8,13 @@ public class CsharpPracticeTests
     [TestCase(-1 , -3 , -4)]
     public void Add_Two_Number(int a , int b , int expected)
     {
+        // arrange
         CsharpPractice csharpPractice = new CsharpPractice();
 
+        // act
         var result = csharpPractice.Add(a , b);
 
+        // assert
         Assert.AreEqual(expected , result);
     }
 
