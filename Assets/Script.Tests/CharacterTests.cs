@@ -38,19 +38,44 @@ public class CharacterTests
         // arrange
         // 建立玩家角色的元件
         var character = new GameObject().AddComponent<Character>();
-        character.SetAtk(90);
+        character.SetAtk(30);
 
         // 建立敵人的元件
         var enemy = new GameObject().AddComponent<Enemy>();
-        enemy.SetHp(100);
+        enemy.SetHp(20);
 
         // act
         // 玩家角色攻擊敵人
-        character.Attack(enemy);
         character.Attack(enemy);
 
         // assert
         var hp = enemy.GetHp();
         Assert.AreEqual(0 , hp);
+    }
+
+    [Test(Description = "角色攻擊偵測區域內的所有敵人")]
+    public void Character_Attack_All_Triggered_Enemies()
+    {
+        // arrange
+        // 建立玩家角色的元件
+        var character = new GameObject().AddComponent<Character>();
+        character.SetAtk(10);
+        // 建立敵人的元件
+        var enemy1        = new GameObject().AddComponent<Enemy>();
+        var enemy1Collider = enemy1.gameObject.AddComponent<BoxCollider2D>();
+        enemy1.SetHp(100);
+        var enemy2 = new GameObject().AddComponent<Enemy>();
+        var enemy2Collider = enemy2.gameObject.AddComponent<BoxCollider2D>();
+        enemy2.SetHp(100);
+        character.OnTriggerEnter2D(enemy1Collider);
+        character.OnTriggerEnter2D(enemy2Collider);
+
+        // act
+        // 玩家角色攻擊
+        character.AttackAllTriggeredEnemies();
+
+        // assert
+        Assert.AreEqual(90 , enemy1.GetHp());
+        Assert.AreEqual(90 , enemy2.GetHp());
     }
 }
