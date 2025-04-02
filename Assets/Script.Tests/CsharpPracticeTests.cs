@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using NUnit.Framework;
 
 public class CsharpPracticeTests
@@ -26,5 +27,17 @@ public class CsharpPracticeTests
         var result = timeConverter.Add(2 , 2);
 
         Assert.AreEqual(4 , result);
+    }
+
+    [Test(Description = "取得語言本地化文字")]
+    [TestCase("Apple" ,  "蘋果")]
+    [TestCase("Banana" , "香蕉")]
+    public void GetLocalizationText(string key , string expectedText)
+    {
+        var csharpPractice = new CsharpPractice();
+
+        var text = csharpPractice.GetLocalizationText(key);
+
+        Assert.AreEqual(expectedText , text);
     }
 }
